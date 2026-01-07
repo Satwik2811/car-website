@@ -210,6 +210,30 @@ body {
   margin: 0;
   font-family: Arial, sans-serif;
 }
+
+/* MOBILE */
+@media (max-width: 768px) {
+  .logo {
+    height: 62px;
+  }
+
+  body {
+    padding-top: 115px;
+  }
+
+  .nav-links {
+    gap: 14px;
+  }
+}
+@media (max-width: 768px) {
+  .logo {
+    height: 65px;
+  }
+  body {
+    padding-top: 115px;
+  }
+}
+
 @media (max-width: 768px) {
   .hero {
     min-height: 55vh;
@@ -566,6 +590,8 @@ body {
 }
 
 /* MOBILE */
+
+/* MOBILE */
 @media (max-width: 768px) {
   .logo {
     height: 62px;
@@ -574,7 +600,20 @@ body {
   body {
     padding-top: 115px;
   }
+
+  .nav-links {
+    gap: 14px;
+  }
 }
+@media (max-width: 768px) {
+  .logo {
+    height: 65px;
+  }
+  body {
+    padding-top: 115px;
+  }
+}
+
 
 /* ABOUT SECTION */
 
@@ -1332,3 +1371,26 @@ button.whatsapp {
     grid-template-columns: 1fr;
   }
 } 
+
+/* MOBILE */
+@media (max-width: 768px) {
+  .logo {
+    height: 62px;
+  }
+
+  body {
+    padding-top: 115px;
+  }
+
+  .nav-links {
+    gap: 14px;
+  }
+}
+@media (max-width: 768px) {
+  .logo {
+    height: 65px;
+  }
+  body {
+    padding-top: 115px;
+  }
+}

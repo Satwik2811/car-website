@@ -8,7 +8,7 @@
 
 /* ================= TOP BAR ================= */
 .top-bar {
-  background:  rgb(5, 169, 155);
+  background: goldenrod;
   color: #ffffff;
   text-align: center;
   padding: 10px;
@@ -31,7 +31,7 @@
 }
 
 .logo {
-  height: 120px;
+  height: 1201  px;
 }
 
 .nav-links {
