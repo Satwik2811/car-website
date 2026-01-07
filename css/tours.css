@@ -1,0 +1,442 @@
+/* ================= RESET ================= */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+/* ================= TOP BAR ================= */
+.top-bar {
+  background:  rgb(5, 169, 155);
+  color: #ffffff;
+  text-align: center;
+  padding: 10px;
+  font-size: 14px;
+}
+
+/* ================= NAVBAR ================= */
+.navbar {
+  background: #ffffff;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+.nav-container {
+  max-width: 1200px;
+  margin: auto;
+  padding: 15px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.logo {
+  height: 120px;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 22px;
+}
+
+.nav-links li a {
+  text-decoration: none;
+  font-weight: bold;
+  color:  goldenrod;
+}
+
+.nav-links li a.active {
+  color: #c89b3c;
+}
+
+/* ================= HERO ================= */
+.tour-hero {
+  height: 70vh; /* taller hero = premium look */
+  background-image:
+    linear-gradient(
+      rgba(0, 0, 0, 0.35),
+      rgba(0, 0, 0, 0.35)
+    ),
+    url("https://images.unsplash.com/photo-1500530855697-b586d89ba3ee");
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+}
+
+/* HERO CONTENT */
+.tour-hero-overlay {
+  height: 100%;
+  background: transparent;
+  color: #ffffff;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 20px;
+}
+
+.tour-hero-overlay h1 {
+  font-size: 44px;
+  margin-bottom: 15px;
+  font-weight: bold;
+  letter-spacing: 1px;
+  text-shadow: 2px 2px 10px rgba(0,0,0,0.7);
+}
+
+.tour-hero-overlay p {
+  max-width: 900px;
+  font-size: 18px;
+  line-height: 1.7;
+  text-shadow: 1px 1px 8px rgba(0,0,0,0.7);
+}
+/* ================= TOUR SECTION ================= */
+.tour-section {
+  background:   goldenrod;
+  padding: 60px 20px;
+}
+
+.tour-grid {
+  max-width: 1200px;
+  margin: auto;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+}
+
+/* ================= TOUR CARD ================= */
+.tour-card {
+  background: #ffffff;
+  border-radius: 6px;
+  padding: 20px;
+  text-align: center;
+}
+
+.tour-card img {
+  width: 100%;
+  height: auto;
+  margin-bottom: 15px;
+}
+
+.tour-card h3 {
+  color: #f5b400; /* GOLD */
+  font-size: 18px;
+  margin-bottom: 8px;
+}
+
+.tour-card p {
+  font-size: 14px;
+  margin-bottom: 6px;
+  color: #222;
+}
+
+.price {
+  color: red;
+  font-weight: bold;
+  margin-top: 8px;
+}
+
+.note {
+  font-size: 13px;
+  color: #444;
+}
+
+/* ================= BUTTONS ================= */
+.btn-group {
+  margin-top: 12px;
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+
+.btn-group a {
+  text-decoration: none;
+}
+
+button {
+  padding: 10px 18px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: bold;
+  color: #ffffff;
+  background: #0a5cff;
+}
+
+button.whatsapp {
+  background: #25d366;
+}
+
+/* ================= FOOTER ================= */
+.footer {
+  background: #0a1f44;
+  color: #ffffff;
+  text-align: center;
+  padding: 20px;
+  font-size: 14px;
+}
+
+/* ================= RESPONSIVE ================= */
+@media (max-width: 900px) {
+  .tour-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .nav-links {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+}
+
+/* EXTRA NOTE STYLE */
+.extra-note {
+  display: block;
+  margin-top: 6px;
+  color: #d60000;
+  font-size: 13px;
+  font-weight: bold;
+}
+
+/* ================= CUSTOMER REVIEWS ================= */
+
+.reviews {
+  padding: 80px 20px;
+  background: #f5f7fb;
+  text-align: center;
+}
+
+.reviews h2 {
+  font-size: 32px;
+  margin-bottom: 10px;
+  color:   goldenrod;
+}
+
+.reviews-subtitle {
+  font-size: 16px;
+  color: #555;
+  margin-bottom: 40px;
+}
+
+/* REVIEW GRID */
+.review-container {
+  max-width: 1100px;
+  margin: auto;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+}
+
+/* BIGGER REVIEW CARD */
+.review-card {
+  background: #ffffff;
+  padding: 35px 30px;
+  border-radius: 10px;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.12);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  min-height: 260px;
+}
+
+.review-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+}
+
+.review-card p {
+  font-size: 16px;
+  line-height: 1.7;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+.review-card h4 {
+  color:   goldenrod;
+  font-size: 17px;
+  margin-bottom: 4px;
+}
+
+.review-card span {
+  font-size: 14px;
+  color: #777;
+}
+
+/* RESPONSIVE */
+@media (max-width: 900px) {
+  .review-container {
+    grid-template-columns: 1fr;
+  }
+
+  .review-card {
+    min-height: auto;
+  }
+}
+/* ================= FOOTER ================= */
+
+.site-footer {
+  background:   goldenrod;
+  color: #ffffff;
+  padding: 60px 20px 0;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.footer-container {
+  max-width: 1200px;
+  margin: auto;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* ONLY 3 COLUMNS */
+  gap: 40px;
+}
+
+.footer-box h3 {
+  font-size: 16px;
+  margin-bottom: 15px;
+  text-transform: uppercase;
+}
+
+.footer-box p {
+  font-size: 14px;
+  line-height: 1.7;
+  margin-bottom: 8px;
+  color: #e6e6e6;
+}
+
+.footer-box a {
+  color: #ffffff;
+  text-decoration: none;
+}
+
+/* LINKS */
+.footer-links {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-links li {
+  margin-bottom: 10px;
+}
+
+.footer-links li a::before {
+  content: "› ";
+  font-weight: bold;
+  color: #ffffff;
+}
+
+/* COPYRIGHT */
+.footer-bottom {
+  margin-top: 40px;
+  padding: 15px;
+  background:   goldenrod;
+  text-align: center;
+  font-size: 14px;
+}
+@media (max-width: 768px) {
+  .tour-hero {
+    height: 55vh;
+  }
+
+  .tour-hero-overlay h1 {
+    font-size: 28px;
+  }
+
+  .tour-hero-overlay p {
+    font-size: 15px;
+  }
+}
+/* ================= HEADER FIX (GLOBAL) ================= */
+/* ======================================================
+   GLOBAL HEADER – FINAL (USED FOR ALL PAGES)
+   ====================================================== */
+
+html, body {
+  margin: 0;
+  padding: 0;
+}
+
+/* TOP BAR */
+.top-bar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 40px;
+  background:   goldenrod;
+  color: #ffffff;
+  text-align: center;
+  line-height: 40px;
+  font-size: 14px;
+  font-weight: bold;
+  z-index: 10000;
+}
+
+/* NAVBAR */
+.navbar {
+  position: fixed;
+  top: 40px;
+  left: 0;
+  width: 100%;
+  background: #ffffff;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.15);
+  z-index: 9999;
+}
+
+/* SPACE FOR HEADER */
+body {
+  padding-top: 135px;
+}
+
+/* NAV CONTENT */
+.nav-container {
+  max-width: 1200px;
+  margin: auto;
+  padding: 12px 25px;
+  display: flex;
+  align-items: center;
+}
+
+/* LOGO */
+.logo {
+  height: 120px;
+  width: auto;
+  object-fit: contain;
+}
+
+/* MENU */
+.nav-links {
+  margin-left: auto;
+  display: flex;
+  gap: 26px;
+  align-items: center;
+}
+
+.nav-links a {
+  text-decoration: none;
+  font-weight: bold;
+  color:   goldenrod;
+}
+
+.nav-links a.active {
+  border-bottom: 2px solid  goldenrod;
+}
+
+/* MOBILE */
+@media (max-width: 768px) {
+  .logo {
+    height: 62px;
+  }
+
+  body {
+    padding-top: 115px;
+  }
+
+  .nav-links {
+    gap: 14px;
+  }
+}
+@media (max-width: 768px) {
+  .logo {
+    height: 65px;
+  }
+  body {
+    padding-top: 115px;
+  }
+}
