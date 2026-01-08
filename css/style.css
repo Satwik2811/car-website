@@ -4,26 +4,33 @@ body {
 }
 
 .top-bar {
-  background:  goldenrod;
-  color: white;
-  text-align: right;
-  padding: 8px 20px;
-}
-
-.navbar {
-  position: sticky;
+  position: fixed;
   top: 0;
-  background: white;
+  left: 0;
+  width: 100%;
+  background: goldenrod;
+  color: #ffffff;
+  text-align: center;
+  padding: 10px;
+  font-size: 14px;
+  font-weight: bold;
+  z-index: 10000;
+}
+.nav-container {
+  max-width: 1200px;
+  margin: auto;
+  padding: 12px 20px;
   display: flex;
-  justify-content: space-between;
   align-items: center;
-  padding: 10px 30px;
-  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-  z-index: 1000;
+  justify-content: space-between;
+  gap: 15px;
 }
 
 .logo {
   height: 120px;
+  width: auto;
+  object-fit: contain;
+  flex-shrink: 0;
 }
 /* TOP BAR */
 .top-bar {
@@ -54,34 +61,32 @@ body {
 .nav-links {
   list-style: none;
   display: flex;
-  gap: 30px;
+  gap: 20px;
+  align-items: center;
   margin: 0;
   padding: 0;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+}
+.nav-links li {
+  margin: 0;
 }
 
 .nav-links li a {
   text-decoration: none;
   font-weight: bold;
-  color:  goldenrod;
+  color: goldenrod;
+  white-space: nowrap;
+  font-size: 14px;
+  transition: color 0.3s ease;
 }
 
 .nav-links li a:hover {
-  color: #000;
+  color: #d4a017;
 }
 
-.nav-links {
-  list-style: none;
-  display: flex;
-}
-
-.nav-links li {
-  margin: 0 15px;
-}
-
-.nav-links a {
-  text-decoration: none;
-  color: black;
-  font-weight: bold;
+.nav-links li a.active {
+  color: #d4a017;
 }
 /* ================= HERO ================= */
 .hero {
@@ -1347,6 +1352,48 @@ button.whatsapp {
   font-weight: bold;
   border-radius: 3px;
 }
+/* ================= MOBILE ADJUSTMENTS FOR CONTENT ================= */
+@media (max-width: 768px) {
+  /* Hero sections */
+  .hero,
+  .tour-hero,
+  .cab-hero,
+  .outstation-hero,
+  .about-hero {
+    min-height: 55vh;
+  }
+
+  .hero h1,
+  .tour-hero-overlay h1,
+  .cab-hero-overlay h1,
+  .outstation-hero-overlay h1,
+  .about-hero-overlay h1 {
+    font-size: 28px;
+  }
+
+  .hero p,
+  .tour-hero-overlay p,
+  .cab-hero-overlay p,
+  .outstation-hero-overlay p,
+  .about-hero-overlay p {
+    font-size: 15px;
+  }
+
+  /* Grids to single column */
+  .tour-grid,
+  .vehicle-grid,
+  .outstation-grid,
+  .review-container,
+  .card-container {
+    grid-template-columns: 1fr;
+  }
+
+  /* Footer to single column */
+  .footer-container {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+}
 
 /* RESPONSIVE */
 @media (max-width: 900px) {
@@ -1354,247 +1401,14 @@ button.whatsapp {
     grid-template-columns: 1fr;
   }
 } 
-
-/* MOBILE */
-@media (max-width: 768px) {
-  .logo {
-    height: 62px;
+@media (max-width: 900px) and (min-width: 769px) {
+  .tour-grid,
+  .vehicle-grid,
+  .outstation-grid {
+    grid-template-columns: repeat(2, 1fr);
   }
 
-  body {
-    padding-top: 115px;
-  }
-
-  .nav-links {
-    gap: 14px;
-  }
-}/* ================= RESET ================= */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: Arial, Helvetica, sans-serif;
-}
-
-html, body {
-  margin: 0;
-  padding: 0;
-}
-
-/* ================= TOP BAR ================= */
-.top-bar {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 40px;
-  background: goldenrod;
-  color: #fff;
-  text-align: center;
-  line-height: 40px;
-  font-weight: bold;
-  z-index: 10000;
-}
-
-/* ================= NAVBAR ================= */
-.navbar {
-  position: fixed;
-  top: 40px;
-  left: 0;
-  width: 100%;
-  background: #ffffff;
-  box-shadow: 0 2px 10px rgba(0,0,0,0.15);
-  z-index: 9999;
-}
-
-.nav-container {
-  max-width: 1200px;
-  margin: auto;
-  padding: 12px 25px;
-  display: flex;
-  align-items: center;
-}
-
-/* LOGO */
-.logo {
-  height: 120px;
-  width: auto;
-  object-fit: contain;
-}
-
-/* MENU */
-.nav-links {
-  list-style: none;
-  margin-left: auto;
-  display: flex;
-  gap: 26px;
-  align-items: center;
-}
-
-.nav-links a {
-  text-decoration: none;
-  font-weight: bold;
-  color: goldenrod;
-}
-
-.nav-links a.active {
-  border-bottom: 2px solid goldenrod;
-}
-
-/* ================= BODY OFFSET ================= */
-body {
-  padding-top: 140px;
-}
-
-/* ================= HERO (COMMON STYLE) ================= */
-.hero,
-.tour-hero,
-.outstation-hero,
-.about-hero {
-  min-height: 70vh;
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-}
-
-.hero,
-.tour-hero {
-  background-image:
-    linear-gradient(rgba(0,0,0,0.35), rgba(0,0,0,0.35)),
-    url("https://images.unsplash.com/photo-1500530855697-b586d89ba3ee");
-}
-
-.hero-overlay,
-.tour-hero-overlay,
-.about-hero-overlay,
-.outstation-hero-overlay {
-  height: 100%;
-  color: #fff;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  padding: 20px;
-}
-
-.hero h1,
-.tour-hero-overlay h1,
-.about-hero-overlay h1,
-.outstation-hero-overlay h1 {
-  font-size: 44px;
-  margin-bottom: 15px;
-  text-shadow: 2px 2px 10px rgba(0,0,0,0.7);
-}
-
-.hero p,
-.tour-hero-overlay p,
-.about-hero-overlay p,
-.outstation-hero-overlay p {
-  font-size: 18px;
-  max-width: 900px;
-  line-height: 1.7;
-}
-
-/* ================= HERO BOXES ================= */
-.hero-boxes {
-  display: flex;
-  gap: 20px;
-  flex-wrap: wrap;
-  justify-content: center;
-  margin-top: 30px;
-}
-
-.hero-box {
-  background: goldenrod;
-  padding: 16px 28px;
-  font-weight: bold;
-  border-radius: 6px;
-  min-width: 220px;
-  text-align: center;
-  text-decoration: none;
-  color: #000;
-}
-
-/* ================= FOOTER ================= */
-.site-footer {
-  background: goldenrod;
-  color: #fff;
-  padding: 60px 20px 0;
-}
-
-.footer-container {
-  max-width: 1200px;
-  margin: auto;
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 40px;
-}
-
-.footer-box h3 {
-  margin-bottom: 15px;
-  text-transform: uppercase;
-}
-
-.footer-box p,
-.footer-box a {
-  font-size: 14px;
-  color: #fff;
-  text-decoration: none;
-}
-
-.footer-bottom {
-  margin-top: 40px;
-  padding: 15px;
-  background: goldenrod;
-  text-align: center;
-}
-
-/* ================= MOBILE FIX (MOST IMPORTANT) ================= */
-@media (max-width: 768px) {
-
-  /* LOGO */
-  .logo {
-    height: 55px;
-  }
-
-  /* HEADER HEIGHT FIX */
-  body {
-    padding-top: 160px;
-  }
-
-  /* NAVBAR STACK LIKE PAGE-2 */
-  .nav-container {
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .nav-links {
-    flex-wrap: wrap;
-    justify-content: center;
-    row-gap: 10px;
-    gap: 14px;
-    text-align: center;
-  }
-
-  /* HERO TEXT */
-  .hero h1,
-  .tour-hero-overlay h1,
-  .about-hero-overlay h1,
-  .outstation-hero-overlay h1 {
-    font-size: 28px;
-  }
-
-  .hero p,
-  .tour-hero-overlay p,
-  .about-hero-overlay p,
-  .outstation-hero-overlay p {
-    font-size: 15px;
-  }
-
-  /* FOOTER */
   .footer-container {
-    grid-template-columns: 1fr;
-    text-align: center;
+    grid-template-columns: 1fr 1fr;
   }
 }
