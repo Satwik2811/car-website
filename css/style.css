@@ -6,48 +6,70 @@
   font-family: Arial, Helvetica, sans-serif;
 }
 
+html, body {
+  width: 100%;
+}
+
 /* ================= TOP BAR ================= */
 .top-bar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 40px;
   background: goldenrod;
-  color: #ffffff;
+  color: #fff;
   text-align: center;
-  padding: 10px;
+  line-height: 40px;
   font-size: 14px;
+  font-weight: bold;
+  z-index: 1000;
 }
 
 /* ================= NAVBAR ================= */
 .navbar {
+  position: fixed;
+  top: 40px;
+  left: 0;
+  width: 100%;
   background: #ffffff;
-  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+  box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+  z-index: 999;
 }
 
+/* NAV CONTAINER */
 .nav-container {
   max-width: 1200px;
   margin: auto;
-  padding: 15px 20px;
+  padding: 12px 16px;
   display: flex;
   align-items: center;
   justify-content: space-between;
 }
 
+/* LOGO */
 .logo {
-  height: 120px;
+  height: 110px;
+  width: auto;
 }
 
+/* MENU */
 .nav-links {
   list-style: none;
   display: flex;
-  gap: 22px;
+  gap: 20px;
 }
 
-.nav-links li a {
+.nav-links a {
   text-decoration: none;
   font-weight: bold;
-  color:  goldenrod;
+  color: goldenrod;
+  font-size: 14px;
 }
 
-.nav-links li a.active {
-  color: #c89b3c;
+/* ================= BODY OFFSET ================= */
+body {
+  padding-top: 155px;
 }
 
 /* ================= HERO ================= */
@@ -93,18 +115,30 @@
 }
 
 
-
 @media (max-width: 768px) {
-  .tour-hero {
-    height: 55vh;
+
+  .logo {
+    height: 70px;
   }
 
-  .tour-hero-overlay h1 {
-    font-size: 28px;
+  .nav-container {
+    flex-direction: column;
+    gap: 10px;
   }
 
-  .tour-hero-overlay p {
-    font-size: 15px;
+  .nav-links {
+    width: 100%;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 12px;
+  }
+
+  .nav-links a {
+    font-size: 13px;
+  }
+
+  body {
+    padding-top: 120px;
   }
 }
 
@@ -163,20 +197,34 @@ body {
 
 
 /* Very small screens */
-
 @media (max-width: 768px) {
-  .tour-hero {
-    height: 55vh;
+
+  .logo {
+    height: 70px;
   }
 
-  .tour-hero-overlay h1 {
-    font-size: 28px;
+  .nav-container {
+    flex-direction: column;
+    gap: 10px;
   }
 
-  .tour-hero-overlay p {
-    font-size: 15px;
+  .nav-links {
+    width: 100%;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 12px;
+  }
+
+  .nav-links a {
+    font-size: 13px;
+  }
+
+  body {
+    padding-top: 170px;
   }
 }
+
+/* ================= RESET ================= */
 /* ================= RESET ================= */
 * {
   margin: 0;
@@ -185,49 +233,72 @@ body {
   font-family: Arial, Helvetica, sans-serif;
 }
 
+html, body {
+  width: 100%;
+}
+
 /* ================= TOP BAR ================= */
 .top-bar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 40px;
   background: goldenrod;
-  color: #ffffff;
+  color: #fff;
   text-align: center;
-  padding: 10px;
+  line-height: 40px;
   font-size: 14px;
+  font-weight: bold;
+  z-index: 1000;
 }
 
 /* ================= NAVBAR ================= */
 .navbar {
+  position: fixed;
+  top: 40px;
+  left: 0;
+  width: 100%;
   background: #ffffff;
-  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+  box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+  z-index: 999;
 }
 
+/* NAV CONTAINER */
 .nav-container {
   max-width: 1200px;
   margin: auto;
-  padding: 15px 20px;
+  padding: 12px 16px;
   display: flex;
   align-items: center;
   justify-content: space-between;
 }
 
+/* LOGO */
 .logo {
-  height: 120px;
+  height: 110px;
+  width: auto;
 }
 
+/* MENU */
 .nav-links {
   list-style: none;
   display: flex;
-  gap: 22px;
+  gap: 20px;
 }
 
-.nav-links li a {
+.nav-links a {
   text-decoration: none;
   font-weight: bold;
-  color:  goldenrod;
+  color: goldenrod;
+  font-size: 14px;
 }
 
-.nav-links li a.active {
-  color: #c89b3c;
+/* ================= BODY OFFSET ================= */
+body {
+  padding-top: 155px;
 }
+
 
 /* ================= HERO ================= */
 .tour-hero {
@@ -273,19 +344,31 @@ body {
 
 /* MOBILE HERO TEXT */
 @media (max-width: 768px) {
-  .tour-hero {
-    height: 55vh;
+
+  .logo {
+    height: 70px;
   }
 
-  .tour-hero-overlay h1 {
-    font-size: 28px;
+  .nav-container {
+    flex-direction: column;
+    gap: 10px;
   }
 
-  .tour-hero-overlay p {
-    font-size: 15px;
+  .nav-links {
+    width: 100%;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 12px;
+  }
+
+  .nav-links a {
+    font-size: 13px;
+  }
+
+  body {
+    padding-top: 170px;
   }
 }
-
 
 /*--------About----------*/
 /* ================= RESET ================= */
@@ -297,48 +380,70 @@ body {
   font-family: Arial, Helvetica, sans-serif;
 }
 
+html, body {
+  width: 100%;
+}
+
 /* ================= TOP BAR ================= */
 .top-bar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 40px;
   background: goldenrod;
-  color: #ffffff;
+  color: #fff;
   text-align: center;
-  padding: 10px;
+  line-height: 40px;
   font-size: 14px;
+  font-weight: bold;
+  z-index: 1000;
 }
 
 /* ================= NAVBAR ================= */
 .navbar {
+  position: fixed;
+  top: 40px;
+  left: 0;
+  width: 100%;
   background: #ffffff;
-  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+  box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+  z-index: 999;
 }
 
+/* NAV CONTAINER */
 .nav-container {
   max-width: 1200px;
   margin: auto;
-  padding: 15px 20px;
+  padding: 12px 16px;
   display: flex;
   align-items: center;
   justify-content: space-between;
 }
 
+/* LOGO */
 .logo {
-  height: 120px;
+  height: 110px;
+  width: auto;
 }
 
+/* MENU */
 .nav-links {
   list-style: none;
   display: flex;
-  gap: 22px;
+  gap: 20px;
 }
 
-.nav-links li a {
+.nav-links a {
   text-decoration: none;
   font-weight: bold;
-  color:  goldenrod;
+  color: goldenrod;
+  font-size: 14px;
 }
 
-.nav-links li a.active {
-  color: #c89b3c;
+/* ================= BODY OFFSET ================= */
+body {
+  padding-top: 155px;
 }
 
 /* ================= HERO ================= */
@@ -384,16 +489,29 @@ body {
 }
 /* MOBILE HERO TEXT */
 @media (max-width: 768px) {
-  .tour-hero {
-    height: 55vh;
+
+  .logo {
+    height: 70px;
   }
 
-  .tour-hero-overlay h1 {
-    font-size: 28px;
+  .nav-container {
+    flex-direction: column;
+    gap: 10px;
   }
 
-  .tour-hero-overlay p {
-    font-size: 15px;
+  .nav-links {
+    width: 100%;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 12px;
+  }
+
+  .nav-links a {
+    font-size: 13px;
+  }
+
+  body {
+    padding-top: 170px;
   }
 }
 
@@ -554,18 +672,32 @@ body {
 
 /* ================= RESPONSIVE ================= */
 @media (max-width: 768px) {
-  .tour-hero {
-    height: 55vh;
+
+  .logo {
+    height: 70px;
   }
 
-  .tour-hero-overlay h1 {
-    font-size: 28px;
+  .nav-container {
+    flex-direction: column;
+    gap: 10px;
   }
 
-  .tour-hero-overlay p {
-    font-size: 15px;
+  .nav-links {
+    width: 100%;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 12px;
+  }
+
+  .nav-links a {
+    font-size: 13px;
+  }
+
+  body {
+    padding-top: 170px;
   }
 }
+
 
 /* ================= FINAL HEADER ALIGNMENT (CLEAN) ================= */
 
@@ -644,24 +776,29 @@ body {
 
 /* MOBILE */
 @media (max-width: 768px) {
+
   .logo {
-    height: 62px;
+    height: 70px;
   }
 
-  body {
-    padding-top: 115px;
+  .nav-container {
+    flex-direction: column;
+    gap: 10px;
   }
 
   .nav-links {
-    gap: 14px;
+    width: 100%;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 12px;
   }
-}
-@media (max-width: 768px) {
-  .logo {
-    height: 65px;
+
+  .nav-links a {
+    font-size: 13px;
   }
+
   body {
-    padding-top: 115px;
+    padding-top: 170px;
   }
 }
 
@@ -873,38 +1010,30 @@ body {
 
 /* ================= RESPONSIVE ================= */
 
-
 @media (max-width: 768px) {
-  /* Smaller logo on mobile */
+
   .logo {
-    height: 62px;
-    flex-shrink: 0;
+    height: 70px;
   }
 
-  /* Keep flex-row but allow wrapping */
   .nav-container {
-    flex-wrap: wrap;
-    padding: 10px 15px;
-    align-items: flex-start;
+    flex-direction: column;
+    gap: 10px;
   }
 
-  /* Menu takes remaining space and wraps */
   .nav-links {
-    flex: 1;
-    min-width: 0;
-    justify-content: flex-start;
-    gap: 8px 10px;
-    padding-left: 10px;
+    width: 100%;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 12px;
   }
 
-  .nav-links li a {
-    font-size: 12.5px;
-    padding: 4px 6px;
+  .nav-links a {
+    font-size: 13px;
   }
 
-  /* Adjust body padding */
   body {
-    padding-top: 160px;
+    padding-top: 170px;
   }
 }
 
@@ -933,6 +1062,7 @@ body {
   }
 }
 /* ================= RESET ================= */
+/* ================= RESET ================= */
 * {
   margin: 0;
   padding: 0;
@@ -940,49 +1070,73 @@ body {
   font-family: Arial, Helvetica, sans-serif;
 }
 
+html, body {
+  width: 100%;
+}
+
 /* ================= TOP BAR ================= */
 .top-bar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 40px;
   background: goldenrod;
-  color: #ffffff;
+  color: #fff;
   text-align: center;
-  padding: 10px;
+  line-height: 40px;
   font-size: 14px;
+  font-weight: bold;
+  z-index: 1000;
 }
 
 /* ================= NAVBAR ================= */
 .navbar {
+  position: fixed;
+  top: 40px;
+  left: 0;
+  width: 100%;
   background: #ffffff;
-  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+  box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+  z-index: 999;
 }
 
+/* NAV CONTAINER */
 .nav-container {
   max-width: 1200px;
   margin: auto;
-  padding: 15px 20px;
+  padding: 12px 16px;
   display: flex;
   align-items: center;
   justify-content: space-between;
 }
 
+/* LOGO */
 .logo {
-  height: 120px;
+  height: 110px;
+  width: auto;
 }
 
+/* MENU */
 .nav-links {
   list-style: none;
   display: flex;
-  gap: 22px;
+  gap: 20px;
 }
 
-.nav-links li a {
+.nav-links a {
   text-decoration: none;
   font-weight: bold;
-  color:  goldenrod;
+  color: goldenrod;
+  font-size: 14px;
 }
 
-.nav-links li a.active {
-  color: #c89b3c;
+/* ================= BODY OFFSET ================= */
+body {
+  padding-top: 155px;
 }
+
+
 
 /* ================= HERO ================= */
 .cab-hero {
@@ -1170,25 +1324,33 @@ body {
   }
 
 /* Very small screens */
-@media (max-width: 480px) {
+@media (max-width: 768px) {
+
   .logo {
-    height: 60px;
+    height: 70px;
+  }
+
+  .nav-container {
+    flex-direction: column;
+    gap: 10px;
   }
 
   .nav-links {
-    gap: 6px 8px;
-    padding-left: 8px;
+    width: 100%;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 12px;
   }
 
-  .nav-links li a {
-    font-size: 11.5px;
-    padding: 3px 5px;
+  .nav-links a {
+    font-size: 13px;
   }
 
   body {
-    padding-top: 155px;
+    padding-top: 170px;
   }
 }
+
 
 /* FOOTER */
 .footer {
@@ -1205,97 +1367,78 @@ body {
 }
 
 /* RESET */
+/* ================= RESET ================= */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: Arial, sans-serif;
+  font-family: Arial, Helvetica, sans-serif;
 }
 
-/* TOP BAR */
+html, body {
+  width: 100%;
+}
+
+/* ================= TOP BAR ================= */
 .top-bar {
   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
+  height: 40px;
   background: goldenrod;
-  color: #ffffff;
+  color: #fff;
   text-align: center;
-  padding: 10px;
+  line-height: 40px;
   font-size: 14px;
   font-weight: bold;
-  z-index: 10000;
+  z-index: 1000;
 }
 
-/* NAVBAR */
+/* ================= NAVBAR ================= */
 .navbar {
   position: fixed;
   top: 40px;
   left: 0;
   width: 100%;
   background: #ffffff;
-  box-shadow: 0 2px 10px rgba(0,0,0,0.15);
-  z-index: 9999;
-  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+  z-index: 999;
 }
 
+/* NAV CONTAINER */
 .nav-container {
   max-width: 1200px;
   margin: auto;
-  padding: 12px 20px;
+  padding: 12px 16px;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  gap: 15px;
-  overflow: visible;
 }
 
+/* LOGO */
 .logo {
-  height: 120px;
+  height: 110px;
   width: auto;
-  object-fit: contain;
-  flex-shrink: 0;
 }
 
+/* MENU */
 .nav-links {
   list-style: none;
   display: flex;
   gap: 20px;
-  align-items: center;
-  margin: 0;
-  padding: 0;
-  flex-wrap: wrap;
-  justify-content: flex-end;
-  flex: 1;
-  min-width: 0;
 }
 
-.nav-links li {
-  margin: 0;
-  white-space: nowrap;
-  flex-shrink: 0;
-}
-
-.nav-links li a {
+.nav-links a {
   text-decoration: none;
   font-weight: bold;
   color: goldenrod;
   font-size: 14px;
-  transition: color 0.3s ease;
-  display: block;
 }
 
-.nav-links li a:hover {
-  color: #d4a017;
-}
-
-.nav-links li a.active {
-  color: #d4a017;
-}
-
-/* ================= BODY SPACING ================= */
+/* ================= BODY OFFSET ================= */
 body {
-  padding-top: 175px;
+  padding-top: 155px;
 }
 
 /*hero out ---*/
